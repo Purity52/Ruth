@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Students | SIS</title><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<header class="topbar"><div class="brand">Student Information System</div><button class="menu-toggle" onclick="toggleSidebar()">☰</button><div class="top-user">Administrator</div></header>
+<div class="layout"><aside class="sidebar" id="sidebar">
+<a href="dashboard.html">Dashboard</a><a class="active" href="students.html">Students</a><a href="departments.html">Departments</a><a href="courses.html">Courses</a><a href="results.html">Results</a><a href="index.html" onclick="logout()">Logout</a>
+</aside><main class="content">
+<div class="page-head"><div><h1>Students</h1><p>Register and manage student records.</p></div></div>
+<section class="panel"><h2>Register Student</h2>
+<form id="studentForm" class="form-grid">
+<input name="matric" placeholder="Matric No." required><input name="first" placeholder="First Name" required><input name="middle" placeholder="Middle Name"><input name="last" placeholder="Last Name" required>
+<select name="gender" required><option value="">Gender</option><option>Male</option><option>Female</option><option>Other</option></select>
+<input name="dob" type="date"><input name="email" type="email" placeholder="Email"><input name="phone" placeholder="Phone"><input name="level" placeholder="Level">
+<select name="department" required><option value="">Department</option><option>Computer Science</option><option>Information Technology</option><option>Business Administration</option></select>
+<input class="wide" name="address" placeholder="Address">
+<button class="btn primary" type="submit">Save Student</button>
+</form></section>
+<section class="panel"><div class="table-head"><h2>Student Records</h2><input id="studentSearch" oninput="renderStudents()" placeholder="Search student..."></div>
+<div class="table-wrap"><table><thead><tr><th>Matric No.</th><th>Name</th><th>Gender</th><th>Department</th><th>Level</th><th>Action</th></tr></thead><tbody id="studentTable"></tbody></table></div></section>
+</main></div><script src="js/app.js"></script></body></html>

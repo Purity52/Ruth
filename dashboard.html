@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Student Information System</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Student Information System</div>
+    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+    <div class="top-user">Administrator</div>
+  </header>
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <a class="active" href="dashboard.html">Dashboard</a>
+      <a href="students.html">Students</a>
+      <a href="departments.html">Departments</a>
+      <a href="courses.html">Courses</a>
+      <a href="results.html">Results</a>
+      <a href="index.html" onclick="logout()">Logout</a>
+    </aside>
+    <main class="content">
+      <div class="page-head"><div><h1>Dashboard</h1><p>Welcome to the student information management system.</p></div></div>
+      <section class="stats">
+        <div class="stat-card"><span>Students</span><strong id="studentCount">0</strong><a href="students.html">View students →</a></div>
+        <div class="stat-card"><span>Departments</span><strong id="departmentCount">0</strong><a href="departments.html">View departments →</a></div>
+        <div class="stat-card"><span>Courses</span><strong id="courseCount">0</strong><a href="courses.html">View courses →</a></div>
+        <div class="stat-card"><span>Results</span><strong id="resultCount">0</strong><a href="results.html">View results →</a></div>
+      </section>
+      <section class="panel">
+        <h2>System Overview</h2>
+        <p>Manage student records, academic departments, courses and examination results from one place.</p>
+      </section>
+    </main>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Courses | SIS</title><link rel="stylesheet" href="css/style.css"></head>
+<body><header class="topbar"><div class="brand">Student Information System</div><button class="menu-toggle" onclick="toggleSidebar()">☰</button><div class="top-user">Administrator</div></header>
+<div class="layout"><aside class="sidebar" id="sidebar"><a href="dashboard.html">Dashboard</a><a href="students.html">Students</a><a href="departments.html">Departments</a><a class="active" href="courses.html">Courses</a><a href="results.html">Results</a><a href="index.html" onclick="logout()">Logout</a></aside>
+<main class="content"><div class="page-head"><div><h1>Courses</h1><p>Manage courses offered by the departments.</p></div></div>
+<section class="panel"><h2>Add Course</h2><form id="courseForm" class="form-grid"><input name="code" placeholder="Course Code" required><input name="title" placeholder="Course Title" required><input name="unit" type="number" min="1" max="10" value="3" placeholder="Unit" required><select name="department"><option>Computer Science</option><option>Information Technology</option><option>Business Administration</option></select><button class="btn primary" type="submit">Add Course</button></form></section>
+<section class="panel"><h2>Course List</h2><div class="table-wrap"><table><thead><tr><th>Code</th><th>Course Title</th><th>Unit</th><th>Department</th><th>Action</th></tr></thead><tbody id="courseTable"></tbody></table></div></section>
+</main></div><script src="js/app.js"></script></body></html>
